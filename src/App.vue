@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>Header Content</h1>
+      <h2>Expense Managment App</h2>
     </header>
     <main>
       <ExpenseForm />
@@ -9,7 +9,7 @@
       <ExpenseSummary />
     </main>
     <footer>
-      <p>Footer Content</p>
+      <p>End</p>
     </footer>
   </div>
 </template>

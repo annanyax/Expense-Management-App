@@ -1,7 +1,12 @@
 <template>
-    <header>
-      <h1>{{ "Expense Summary" }}</h1>
-    </header>
+    <div>
+    <h2>Expense Summary</h2>
+    <ul>
+      <li v-for="(total, person) in totals" :key="person">
+        {{ person }}: {{ total }}€
+      </li>
+    </ul>
+  </div>
   </template>
    
   <script setup>

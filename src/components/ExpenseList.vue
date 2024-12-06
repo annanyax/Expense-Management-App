@@ -1,7 +1,13 @@
 <template>
-    <header>
-      <h1>{{ "Expense List" }}</h1>
-    </header>
+    <div>
+      <label>Filter by person:</label>
+      <input v-model="filterPerson" placeholder="Enter person" />
+      <label>Sort by:</label>
+      <select v-model="sortOrder">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
   </template>
    
   <script setup>
