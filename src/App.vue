@@ -4,9 +4,15 @@
       <h2>Expense Managment App</h2>
     </header>
     <main>
-      <ExpenseForm />
-      <ExpenseList />
-      <ExpenseSummary />
+      <ExpenseForm @add-expense="addExpense" />
+
+      <ExpenseList
+        :expenses="expenses"
+        @delete-expense="deleteExpense"
+        @update-expense="updateExpense"
+      />
+
+      <ExpenseSummary :expenses="expenses" />
     </main>
     <!-- <footer>
       <p>End</p>
@@ -30,8 +36,12 @@ export default {
 
     //Add, Delete, Update new expenses to the list.
     const addExpense = (expense) => {
-      expenses.value.push(expense);
-      saveToLocalStorage();
+      if (expense.description && expense.amount && expense.person) {
+        expenses.value.push(expense);
+        saveToLocalStorage();
+      } else {
+        console.error('Invalid expense data', expense);
+      }
     };
 
     const deleteExpense = (index) => {

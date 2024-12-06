@@ -13,15 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-} */
-
 body {
   margin: 0;
   display: flex;
@@ -30,8 +21,8 @@ body {
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
   padding: 0;
-  background-color: #f9f9f9; /* Pale background */
-  color: #333; /* Dark text for readability */
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -40,17 +31,18 @@ h1 {
   line-height: 1.1;
   text-align: center;
   margin-top: 20px;
-  color: #2c3e50; /* Dark blue for main title */
+  color: #2c3e50; 
 }
 
 /* Main app container */
 .app {
   max-width: 800px;
   margin: 20px auto;
-  background: #ffffff; /* White card-like background */
+  background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  text-align: center;
 }
 
 /* Form styles */
@@ -59,6 +51,7 @@ form {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 form input,
@@ -73,43 +66,101 @@ form button {
 
 form input,
 form select {
-  flex: 1; /* Flexible inputs for responsive layout */
+  flex: 1;
   min-width: 100px;
 }
 
 form input:focus,
 form select:focus {
-  border-color: #5dade2; /* Highlighted border */
+  border-color: #5dade2;
   box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
 }
 
 form button {
-  background-color: #5dade2; /* Soft blue button */
+  background-color: #5dade2;
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 12px 20px;
 }
 
 form button:hover {
-  background-color: #3498db; /* Slightly darker on hover */
+  background-color: #3498db;
+  transform: scale(1.05);
 }
 
 
-button {
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 5px auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+  background-color: #eaf2f8;
+}
+
+/* Separate container for expense details */
+.expense-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10px;
+}
+
+.expense-name {
+  font-weight: bold;
+  color: #2c3e50;
+  flex-basis: 30%;
+}
+
+.expense-amount {
+  font-weight: bold;
+  color: #27ae60; 
+  flex-basis: 20%;
+  text-align: left;
+}
+
+.expense-description {
+  color: #555; 
+  flex-basis: 50%;
+  text-align: left;
+}
+
+/* Buttons for actions */
+li button {
+  margin-left: 10px;
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #5dade2; 
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+
+li button:hover {
+  background-color: #3498db;
 }
+
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -117,6 +168,11 @@ button:focus-visible {
 
 .card {
   padding: 2em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #app {
@@ -126,15 +182,57 @@ button:focus-visible {
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Expense Summary container */
+.expense-summary {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f6f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+/* Title for Expense Summary */
+.expense-summary h2 {
+  font-size: 1.8em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* List of total expenses */
+.expense-summary ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.expense-summary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.expense-summary li:last-child {
+  border-bottom: none;
+}
+
+/* Person's name */
+.expense-summary .person-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Total amount */
+.expense-summary .total-amount {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+
+
+
