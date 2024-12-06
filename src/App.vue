@@ -8,9 +8,9 @@
       <ExpenseList />
       <ExpenseSummary />
     </main>
-    <footer>
+    <!-- <footer>
       <p>End</p>
-    </footer>
+    </footer> -->
   </div>
 </template>
 

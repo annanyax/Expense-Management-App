@@ -13,14 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -28,12 +28,73 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  background-color: #f9f9f9; /* Pale background */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  margin-top: 20px;
+  color: #2c3e50; /* Dark blue for main title */
 }
+
+/* Main app container */
+.app {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff; /* White card-like background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input,
+form select,
+form button {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+form input,
+form select {
+  flex: 1; /* Flexible inputs for responsive layout */
+  min-width: 100px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #5dade2; /* Highlighted border */
+  box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
+}
+
+form button {
+  background-color: #5dade2; /* Soft blue button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3498db; /* Slightly darker on hover */
+}
+
 
 button {
   border-radius: 8px;

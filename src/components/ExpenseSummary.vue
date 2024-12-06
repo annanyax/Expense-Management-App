@@ -9,7 +9,7 @@
   </div>
   </template>
    
-  <script setup>
+  <script>
   const title = 'My Vue 3 Project';
   </script>
    
