@@ -42,23 +42,23 @@ export default {
     };
 
     const deleteExpense = (index) => {
-      expenses.value.splice(index, 1);
+      expenses.value.splice(index, 1); // Remove the expense from the reactive list
       saveToLocalStorage();
     };
 
     const updateExpense = (index, updatedExpense) => {
       expenses.value[index] = updatedExpense;
-      saveToLocalStorage();
+      saveToLocalStorage(); //Updated data to local storage
     };
 
     const saveToLocalStorage = () => {
-      localStorage.setItem('expenses', JSON.stringify(expenses.value));
+      localStorage.setItem('expenses', JSON.stringify(expenses.value)); //Convert array to string
     };
 
     const loadFromLocalStorage = () => {
-      const storedExpenses = localStorage.getItem('expenses');
+      const storedExpenses = localStorage.getItem('expenses'); // Retrieve saved data from local storage
       if (storedExpenses) {
-        expenses.value = JSON.parse(storedExpenses);
+        expenses.value = JSON.parse(storedExpenses); // Parse the string and set it to the reactive list
       }
     };
 

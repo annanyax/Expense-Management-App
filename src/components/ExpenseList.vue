@@ -40,12 +40,12 @@
     emits: ['delete-expense', 'update-expense'], // Events to notify parent of changes
     setup(props, { emit }) {
       // Reactive state for filtering and sorting
-      const filterPerson = ref(''); // Stores the filter input
-      const sortOrder = ref('asc'); // Stores the selected sort order
+      const filterPerson = ref('');
+      const sortOrder = ref('asc'); 
   
 
       const filteredAndSortedExpenses = computed(() => {
-        // Filter expenses by the person who paid (case-insensitive)
+        // Filter expenses by the person who paid
         let filtered = props.expenses.filter((expense) =>
           expense.person.toLowerCase().includes(filterPerson.value.toLowerCase())
         );
