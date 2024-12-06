@@ -12,10 +12,8 @@ A modern and simple Vue.js application to manage shared expenses among a group o
 - **Expense Summary**: View a summary of total expenses for each person.
 - **Data Persistence**: Automatically saves expenses in local storage to retain data even after a page refresh.
 
-## 🖼️ Screenshots
-
-![App Overview] (./src/image/emapp.png)
-_A preview of the Shared Expense Management App_
+## **Final Output**
+![Final Output](./src/image/emapp.png)
 
 ## **Technologies Used**
 - **Vue 3**: For building the frontend.
