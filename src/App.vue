@@ -44,13 +44,27 @@ export default {
       saveToLocalStorage();
     };
 
-    
+    const saveToLocalStorage = () => {
+      localStorage.setItem('expenses', JSON.stringify(expenses.value));
+    };
+
+    const loadFromLocalStorage = () => {
+      const storedExpenses = localStorage.getItem('expenses');
+      if (storedExpenses) {
+        expenses.value = JSON.parse(storedExpenses);
+      }
+    };
+
+    loadFromLocalStorage();
+
+  return { expenses, addExpense, deleteExpense, updateExpense };
+
   },
 };
 </script>
  
-<style>
+<!-- <style>
 main {
   padding: 20px;
 }
-</style>
+</style> -->

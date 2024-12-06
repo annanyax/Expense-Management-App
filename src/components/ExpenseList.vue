@@ -10,9 +10,10 @@
     </div>
   </template>
    
-  <script setup>
-  const title = 'My Vue 3 Project';
-  </script>
+  <script>
+import { ref, computed } from 'vue';
+
+</script>
    
   <style>
   header {
