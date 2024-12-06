@@ -14,9 +14,6 @@
 
       <ExpenseSummary :expenses="expenses" />
     </main>
-    <!-- <footer>
-      <p>End</p>
-    </footer> -->
   </div>
 </template>
 
@@ -72,9 +69,3 @@ export default {
   },
 };
 </script>
- 
-<!-- <style>
-main {
-  padding: 20px;
-}
-</style> -->

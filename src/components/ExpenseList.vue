@@ -1,74 +1,4 @@
-<!-- <template>
-    <div>
-      <label>Filter by person:</label>
-      <input v-model="filterPerson" placeholder="Enter person" />
-      <label>Sort by:</label>
-      <select v-model="sortOrder">
-        <option value="asc">Ascending</option>
-        <option value="desc">Descending</option>
-      </select>
-    </div>
-  </template>
-   
-  <script>
-import { ref, computed } from 'vue';
-
-export default {
-  props: ['expenses'],
-  emits: ['delete-expense', 'update-expense'],
-  setup(props, { emit }) {
-    const filterPerson = ref('');
-    const sortOrder = ref('asc');
-
-    const filteredAndSortedExpenses = computed(() => {
-      let filtered = props.expenses.filter((expense) =>
-        expense.person.toLowerCase().includes(filterPerson.value.toLowerCase())
-      );
-      filtered.sort((a, b) =>
-        sortOrder.value === 'asc' ? a.amount - b.amount : b.amount - a.amount
-      );
-
-      return filtered;
-    });
-
-    const deleteExpense = (index) => {
-      emit('delete-expense', index);
-    };
-
-    const editExpense = (index) => {
-      const updatedDescription = prompt(
-        'Update description:',
-        props.expenses[index].description
-      );
-      const updatedAmount = parseFloat(
-        prompt('Update amount:', props.expenses[index].amount)
-      );
-      const updatedPerson = prompt(
-        'Update person:',
-        props.expenses[index].person
-      );
-      emit('update-expense', index, {
-        description: updatedDescription,
-        amount: updatedAmount,
-        person: updatedPerson,
-      });
-    };
-
-    return { filterPerson, sortOrder, filteredAndSortedExpenses, deleteExpense, editExpense };
-  },
-};
-</script>
-   
-  <style>
-  header {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: center;
-  }
-  </style> -->
-
-
-  <template>
+<template>
     <div>
       <!-- Filter input -->
       <label>Filter by person:</label>
@@ -113,9 +43,7 @@ export default {
       const filterPerson = ref(''); // Stores the filter input
       const sortOrder = ref('asc'); // Stores the selected sort order
   
-      /**
-       * Computed property to filter and sort the expenses list.
-       */
+
       const filteredAndSortedExpenses = computed(() => {
         // Filter expenses by the person who paid (case-insensitive)
         let filtered = props.expenses.filter((expense) =>
@@ -140,7 +68,7 @@ export default {
   
       /**
        * Emit an event to edit an expense.
-       * @param {number} index - The index of the expense to edit.
+       * @param {number} index
        */
       const editExpense = (index) => {
         const updatedDescription = prompt(
@@ -167,31 +95,3 @@ export default {
     },
   };
   </script>
-  
-  <!-- <style>
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #f4f4f4;
-  }
-  </style> -->
-  
