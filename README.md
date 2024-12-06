@@ -1,5 +1,27 @@
-# Vue 3 + Vite
+# 💰 Shared Expense Management App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern and simple Vue.js application to manage shared expenses among a group of people. This app allows users to add, view, filter, and summarize expenses seamlessly.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## ✨ Features
+
+- **Add Expenses**: Record expenses with a description, amount, and the person who paid.
+- **View All Expenses**: See a comprehensive list of expenses with filtering and sorting options.
+- **Filter and Sort**:
+  - Filter expenses by person.
+  - Sort expenses by amount in ascending or descending order.
+- **Expense Summary**: View a summary of total expenses for each person.
+- **Data Persistence**: Automatically saves expenses in local storage to retain data even after a page refresh.
+
+## 🖼️ Screenshots
+
+![App Overview](https://via.placeholder.com/800x400)  
+_A preview of the Shared Expense Management App_
+
+## 🛠️ Installation and Setup
+
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+- **Node.js**: Make sure you have Node.js installed. [Download here](https://nodejs.org/).
+
