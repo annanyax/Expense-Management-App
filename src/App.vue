@@ -3,6 +3,11 @@
     <header>
       <h1>Header Content</h1>
     </header>
+    <main>
+      <ExpenseForm />
+      <ExpenseList />
+      <ExpenseSummary />
+    </main>
     <footer>
       <p>Footer Content</p>
     </footer>
